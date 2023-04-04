@@ -1,0 +1,93 @@
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 12px 0;
+  max-width: 1320px;
+}
+
+.logoWrapper {
+  margin-bottom: 8px;
+}
+
+.headerTools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTools button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.headerTools button:hover p {
+  color: var(--secondary-color);
+}
+
+.headerTools img {
+  width: 26px;
+  height: 26px;
+}
+
+.headerTools p {
+  font-size: 0.875rem;
+  font-family: var(--quicksand);
+  font-weight: 600;
+  margin-top: 6px;
+  transition: color 200ms ease;
+  color: var(--light-greyBlue);
+}
+
+#cartIcon {
+  margin-right: 3px;
+}
+
+@media (max-width: 1400px) {
+  .headerContent {
+    max-width: 1160px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .headerContent {
+    max-width: 960px;
+  }
+
+  .logoWrapper img {
+    width: 172px;
+  }
+
+  .headerTools button {
+    margin-left: 24px;
+  }
+
+  .headerTools img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .headerContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 760px;
+  }
+
+  .logoWrapper img {
+    width: 160px;
+  }
+
+  .headerTools {
+    justify-content: end;
+    position: relative;
+    right: 195px;
+  }
+}

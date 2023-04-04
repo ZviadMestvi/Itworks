@@ -1,0 +1,140 @@
+.wrapper {
+  border-radius: 5px;
+  border-right: 1px solid #f2f2f2;
+  margin: 3px 3px 34px 3px;
+  transition: all 200ms;
+  position: relative;
+}
+
+.wrapper:hover {
+  -webkit-box-shadow: 0px 0px 4.65px 0.35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4.65px 0.35px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper:hover button,
+.wrapper:hover .addToWishlistBtn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.imgWrapper .productImg {
+  width: 220px;
+  cursor: pointer;
+}
+
+.addToWishlistBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  transition: all 200ms;
+  padding: 9px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 11px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.addToWishlistBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.addToWishlistBtn img {
+  width: 16px;
+  height: 16px;
+}
+
+.productContent {
+  padding: 5px 10px;
+  margin-bottom: 34px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.productContent h5 {
+  font-size: 0.875rem;
+  font-family: var(--inter);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.productContent p {
+  font-family: var(--mulish);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.productContent p .oldPrice {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-right: 5px;
+  text-decoration: line-through;
+  color: #96989c;
+}
+
+.productContent p .gold {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.addToCartBtn {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.addToCartBtn button {
+  font-size: 0.8125rem;
+  font-family: var(--poppins);
+  font-weight: 500;
+  background-image: linear-gradient(90deg, #0a756a 50%, #f7f6f9 0);
+  background-position: 100%;
+  background-size: 200% 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 18px;
+  transition: all 200ms;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.addToCartBtn button:hover {
+  background-position: 0;
+  color: white;
+}
+
+@media (max-width: 1400px) {
+  .imgWrapper .productImg {
+    width: 224px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .imgWrapper .productImg {
+    width: 232px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    min-width: 32%;
+  }
+
+  .imgWrapper .productImg {
+    width: 100%;
+  }
+}

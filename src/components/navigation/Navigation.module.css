@@ -1,0 +1,163 @@
+.nav {
+  background-color: var(--white);
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.listWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dropdownBtn {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-family: var(--mulish);
+  font-weight: 400;
+  background-color: var(--primary-color);
+  padding: 0 22px;
+  position: relative;
+  height: 59px;
+  width: 340px;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdownBtn #hamburgerIcon {
+  margin-right: 12px;
+  width: 18px;
+  height: 13px;
+}
+
+.dropdownBtn #arrowDownIcon {
+  position: absolute;
+  right: 26px;
+}
+
+.navContent ul {
+  display: flex;
+}
+
+.navContent ul li {
+  font-size: 0.9375rem;
+  font-family: var(--mulish);
+  font-weight: 500;
+  padding: 20px 15px;
+  text-align: center;
+  height: 100%;
+  min-width: 150px;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
+.navContent span {
+  margin-right: 8px;
+  position: relative;
+  left: 8px;
+  top: 1px;
+}
+
+.navContent ul li:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.navContent ul li:hover svg rect {
+  fill: white !important;
+}
+
+.breakLine {
+  width: 1px;
+  height: 30px;
+  background-color: var(--light-grey);
+  margin-right: 14px;
+}
+
+.logosWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.logosWrapper p {
+  font-size: 0.875rem;
+  font-family: var(--poppins);
+  font-weight: 600;
+  margin-left: 45px;
+  cursor: pointer;
+}
+
+.logosWrapper span {
+  vertical-align: middle;
+}
+
+.logosWrapper img {
+  margin-right: 10px;
+}
+
+@media (max-width: 1400px) {
+  .navContent {
+    max-width: 1160px;
+  }
+
+  .navContent ul li {
+    padding: 18px 15px;
+    min-width: 130px;
+  }
+
+  .dropdownBtn {
+    height: 55px;
+    width: 295px;
+  }
+
+  .logosWrapper p {
+    margin-left: 26px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navContent {
+    max-width: 960px;
+  }
+
+  .dropdownBtn {
+    height: 55px;
+    width: 265px;
+  }
+
+  .navContent ul li {
+    min-width: 150px;
+  }
+
+  .logosWrapper p,
+  .breakLine {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .navContent {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .listWrapper {
+    width: 100%;
+  }
+
+  .dropdownBtn {
+    height: 53px;
+    width: 100%;
+  }
+
+  .navContent ul {
+    display: none;
+  }
+}
