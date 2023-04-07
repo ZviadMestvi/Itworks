@@ -9,6 +9,7 @@
   align-items: center;
   position: relative;
   margin-bottom: 16px;
+  height: 32px;
 }
 
 .carouselTitle::before {
@@ -39,6 +40,8 @@
   display: flex;
   background-color: white;
   padding-left: 6px;
+  position: absolute;
+  right: 75px;
 }
 
 .carouselTitle ul li {
@@ -46,7 +49,7 @@
   font-family: var(--nunito-sans);
   font-weight: 700;
   transition: color 100ms;
-  margin: 0 8px;
+  margin-right: 16px;
   width: max-content;
   cursor: pointer;
 }
@@ -104,5 +107,38 @@
   .wrapper {
     max-width: 760px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 510px;
+  }
+
+  .carouselTitle ul {
+    flex-wrap: wrap;
+    gap: 5px 0;
+    padding-left: 0;
+    right: unset;
+    left: 0;
+    top: 42px;
+  }
+
+  .productsWrapper {
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper {
+    max-width: calc(100vw - 30px);
+  }
+
+  .carouselTitle ul {
+    gap: 8px 0;
+  }
+
+  .carouselTitle ul li {
+    font-size: 0.8125rem;
   }
 }

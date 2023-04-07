@@ -12,17 +12,15 @@ const ProductCarousel = props => {
       <div className={classes.carouselTitle}>
         <h4>{props.title}</h4>
 
-        <div className={classes.container}>
-          <ul>{renderCategories}</ul>
+        <ul>{renderCategories}</ul>
 
-          <div className={classes.btnsWrapper}>
-            <button className={classes.prevBtn}>
-              <img src={arrow} alt="prev product" />
-            </button>
-            <button className={classes.nextBtn}>
-              <img src={arrow} alt="next product" />
-            </button>
-          </div>
+        <div className={classes.btnsWrapper}>
+          <button className={classes.prevBtn}>
+            <img src={arrow} alt="prev product" />
+          </button>
+          <button className={classes.nextBtn}>
+            <img src={arrow} alt="next product" />
+          </button>
         </div>
       </div>
 

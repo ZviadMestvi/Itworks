@@ -6,11 +6,7 @@ const WideProductCard = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.imgWrapper}>
-        <img
-          className={classes.productImg}
-          src={productImg}
-          alt="Ryzen PC Image"
-        />
+        <img className={classes.productImg} src={productImg} alt="Ryzen PC" />
         <button className={classes.addToWishlistBtn}>
           <img src={wishlistIcon} alt="Add to favourites" />
         </button>

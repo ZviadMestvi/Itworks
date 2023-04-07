@@ -6,15 +6,18 @@
 }
 
 .categoriesBtn {
-  font-size: 0.875rem;
-  font-family: var(--mulish);
-  font-weight: 600;
   padding: 0 17px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 100%;
   cursor: pointer;
+}
+
+.categoriesBtn span {
+  font-size: 0.875rem;
+  font-family: var(--mulish);
+  font-weight: 600;
 }
 
 .categoriesBtn svg {
@@ -76,5 +79,39 @@
   .searchWrapper {
     order: 3;
     margin: 5px 0 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    width: 510px;
+  }
+}
+
+@media (max-width: 550px) {
+  .searchBar {
+    width: calc(100vw - 30px);
+  }
+}
+
+@media (max-width: 430px) {
+  .headerContent {
+    max-width: calc(100vw - 30px);
+  }
+
+  .categoriesBtn {
+    padding: 0 27px;
+  }
+
+  .categoriesBtn span {
+    display: none;
+  }
+
+  .categoriesBtn svg {
+    margin-left: 0;
+  }
+
+  .searchBar {
+    padding: 1px 115px 0 78px;
   }
 }

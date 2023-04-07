@@ -12,6 +12,7 @@ const Navigation = () => {
         <div className={classes.listWrapper}>
           <button className={classes.dropdownBtn}>
             <img
+              width="17"
               id={classes.hamburgerIcon}
               src={hamburgerMenu}
               alt="Hamburger menu icon"

@@ -107,6 +107,20 @@
 
 @media (max-width: 992px) {
   .imgWrapper .productImg {
-    width: 246px;
+    width: 369px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imgWrapper .productImg {
+    width: 245px;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper {
+    border-right: 0;
+    border-bottom: 1px solid #f2f2f2;
+    width: calc(100vw - 42px);
   }
 }

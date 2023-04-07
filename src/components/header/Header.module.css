@@ -91,3 +91,53 @@
     right: 195px;
   }
 }
+
+@media (max-width: 768px) {
+  .headerContent {
+    max-width: 510px;
+  }
+}
+
+@media (max-width: 550px) {
+  .headerContent {
+    max-width: calc(100vw - 30px);
+  }
+}
+
+@media (max-width: 430px) {
+  .headerContent {
+    max-width: calc(100vw - 30px);
+  }
+
+  .headerTools button {
+    margin-left: 20px;
+  }
+
+  .headerTools img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .headerTools p {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 362px) {
+  .headerTools {
+    right: 165px;
+  }
+
+  .headerTools button {
+    margin-left: 15px;
+  }
+
+  .headerTools img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logoWrapper img {
+    width: 145px;
+  }
+}

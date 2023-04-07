@@ -7,6 +7,7 @@ const SalesCarousel = () => {
     <div className={classes.wrapper}>
       <div className={classes.carouselTitle}>
         <h4>Hot deals</h4>
+
         <div className={classes.line}></div>
 
         <div className={classes.container}>
