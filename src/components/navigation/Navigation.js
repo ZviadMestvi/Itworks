@@ -4,38 +4,76 @@ import newIcon from '../../assets/newIcon.svg';
 import saleIcon from '../../assets/saleIcon.svg';
 import arrowDown from '../../assets/arrowDown.svg';
 import hamburgerMenu from '../../assets/hamburgerMenu.svg';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const categories = [
+  'All Categories',
+  'PCs',
+  'Laptops',
+  'Displays',
+  'PC Parts',
+  'Accessories',
+  'Networking',
+  'Peripherals',
+  'UPS',
+  'Laptop Batteries',
+];
 
 const Navigation = () => {
+  const navigate = useNavigate();
+  const [categoriesVis, setCategoriesVis] = useState(false);
+
+  const navigateHandler = function (value) {
+    navigate(value);
+  };
+
+  const toggleCategoriesVis = function () {
+    setCategoriesVis(!categoriesVis);
+  };
+
+  const renderCategories = categories.map((category, i) => {
+    return <li key={category}>{category}</li>;
+  });
+
   return (
     <nav className={classes.nav}>
       <div className={classes.navContent}>
         <div className={classes.listWrapper}>
-          <button className={classes.dropdownBtn}>
-            <img
-              width="17"
-              id={classes.hamburgerIcon}
-              src={hamburgerMenu}
-              alt="Hamburger menu icon"
-            />
-            Browse categories
-            <img
-              id={classes.arrowDownIcon}
-              src={arrowDown}
-              alt="Dropdown icon"
-            />
-          </button>
+          <div className={classes.dropdownBtnWrapper}>
+            <button
+              className={classes.dropdownBtn}
+              onClick={toggleCategoriesVis}
+            >
+              <img
+                id={classes.hamburgerIcon}
+                src={hamburgerMenu}
+                alt="Hamburger menu icon"
+              />
+              Browse categories
+              <img
+                id={classes.arrowDownIcon}
+                src={arrowDown}
+                alt="Dropdown icon"
+              />
+            </button>
 
-          <ul>
-            <li>
+            {categoriesVis && (
+              <ul className={classes.categories}>{renderCategories}</ul>
+            )}
+          </div>
+
+          <ul className={classes.navItems}>
+            <li onClick={navigateHandler.bind(null, '/products')}>
               <p>PC Builder</p>
             </li>
-            <li>
+            <li onClick={navigateHandler.bind(null, '/products')}>
               <p>Services</p>
             </li>
-            <li>
+            <li onClick={navigateHandler.bind(null, '/products')}>
               <p>Warranty</p>
             </li>
-            <li>
+            <li onClick={navigateHandler.bind(null, '/products')}>
               <p>Contact</p>
             </li>
           </ul>

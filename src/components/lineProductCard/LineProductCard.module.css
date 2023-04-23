@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 200ms;
+  margin: 10px 0;
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  -webkit-box-shadow: 0px 0px 4.65px 0.35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4.65px 0.35px rgba(0, 0, 0, 0.2);
+}
+
+.leftContainer {
+  display: flex;
+  border-right: 1px solid #e5e5e5;
+}
+
+.leftContainer .productImg {
+  margin-right: 10px;
+  width: 200px;
+}
+
+.leftContainer .titleWrapper {
+  margin-top: 10px;
+}
+
+.leftContainer .titleWrapper h5 {
+  font-size: 1rem;
+  font-family: var(--mulish);
+  font-weight: 600;
+}
+
+.leftContainer .titleWrapper p {
+  font-size: 0.875rem;
+  margin-top: 12px;
+}
+
+.rightContainer {
+  margin: 20px 0 0 25px;
+  width: 30%;
+  height: 100%;
+}
+
+.price {
+  font-family: var(--inter);
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #96989c;
+}
+
+.addToCartBtn {
+  font-size: 0.8125rem;
+  font-family: var(--poppins);
+  font-weight: 500;
+  margin: 13px 0;
+  background-image: linear-gradient(90deg, #0a756a 50%, #f7f6f9 0);
+  background-position: 100%;
+  background-size: 200% 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 18px;
+  transition: all 200ms;
+  width: 100%;
+  cursor: pointer;
+}
+
+.addToCartBtn:hover {
+  background-position: 0;
+  color: white;
+}
+
+.addToWishlistBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.addToWishlistBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.addToWishlistBtn img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1200px) {
+  .leftContainer .productImg {
+    width: 190px;
+  }
+
+  .leftContainer .titleWrapper p {
+    width: 80%;
+  }
+
+  .rightContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper,
+  .leftContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .leftContainer {
+    border-right: none;
+  }
+
+  .leftContainer .productImg {
+    margin: 0;
+  }
+
+  .leftContainer .titleWrapper p {
+    margin: 10px auto;
+  }
+
+  .rightContainer {
+    margin: 15px 0 0 0;
+  }
+}

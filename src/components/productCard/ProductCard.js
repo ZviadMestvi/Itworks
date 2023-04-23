@@ -1,8 +1,11 @@
-import classes from './ProductCard.module.css';
+import mainPage from './ProductCard.module.css';
+import productsPage from './GridProductCard.module.css';
 import productImg from '../../assets/productImg.webp';
 import wishlistIcon from '../../assets/heartIcon.svg';
 
-const ProductCard = () => {
+const ProductCard = props => {
+  const classes = props.page === 'main' ? mainPage : productsPage;
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.imgWrapper}>

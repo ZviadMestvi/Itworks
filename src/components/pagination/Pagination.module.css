@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+.wrapper button {
+  margin: 2px 12px 0 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.wrapper button img {
+  width: 15px;
+  height: 15px;
+  filter: invert(98%) sepia(6%) saturate(1391%) hue-rotate(203deg)
+    brightness(112%) contrast(80%);
+}
+
+#prevBtnIcon {
+  transform: rotate(180deg);
+}
+
+.wrapper ul {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper ul li {
+  font-family: var(--inter);
+  border-radius: 5px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.wrapper ul li:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

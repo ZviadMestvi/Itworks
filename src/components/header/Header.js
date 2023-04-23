@@ -8,12 +8,16 @@ import Navigation from '../navigation/Navigation';
 import QuickInfo from '../quickInfo/QuickInfo';
 
 const Header = () => {
+  const goToHome = function () {
+    window.location = '/';
+  };
+
   return (
     <header>
       <QuickInfo />
 
       <div className={classes.headerContent}>
-        <div className={classes.logoWrapper}>
+        <div className={classes.logoWrapper} onClick={goToHome}>
           <img src={logo} alt="ITWorks logo" />
         </div>
 

@@ -25,14 +25,14 @@ const ProductCarousel = props => {
       </div>
 
       <div className={classes.productsWrapper}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
+        <ProductCard page="main" />
       </div>
     </div>
   );

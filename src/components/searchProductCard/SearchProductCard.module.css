@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 5px 12px;
+  cursor: pointer;
+}
+
+.wrapper:hover .imgWrapper h5 {
+  color: var(--primary-color);
+}
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.imgWrapper img {
+  width: 60px;
+  height: 60px;
+}
+
+.imgWrapper h5 {
+  font-size: 0.8125rem;
+  font-family: var(--inter);
+  font-weight: 600;
+  transition: all 200ms;
+  margin-left: 10px;
+}
+
+.oldPrice {
+  font-size: 0.75rem;
+  font-family: var(--mulish);
+  text-align: end;
+  margin-bottom: 3px;
+  color: #96989c;
+}
+
+.price {
+  font-size: 0.875rem;
+  font-family: var(--mulish);
+  font-weight: 500;
+}
