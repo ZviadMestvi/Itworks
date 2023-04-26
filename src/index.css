@@ -53,7 +53,7 @@ code {
 
 button {
   border: 0;
-  outline: 0;
+  outline: transparent;
 }
 
 ul {

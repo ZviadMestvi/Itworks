@@ -4,6 +4,7 @@ import App from './App';
 import ProductsPage from './pages/ProductsPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+import ProductPage from './pages/ProductPage';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
     path: '/products',
     element: <ProductsPage />,
     errorElement: <h1>Products doesnt exist</h1>,
+  },
+  {
+    path: '/product/:name',
+    element: <ProductPage />,
+    errorElement: <h1>Product wasn't found</h1>,
   },
 ]);
 
