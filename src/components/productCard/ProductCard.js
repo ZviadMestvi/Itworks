@@ -15,7 +15,7 @@ const ProductCard = props => {
   return (
     <div
       className={classes.wrapper}
-      onClick={navigateHandler.bind(null, 'product/test')}
+      onClick={navigateHandler.bind(null, '/product/test')}
     >
       <div className={classes.imgWrapper}>
         <img className={classes.productImg} src={productImg} alt="Ryzen PC " />
