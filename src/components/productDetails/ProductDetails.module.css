@@ -114,4 +114,8 @@
   .content table td {
     padding: 0 20px 12px 20px;
   }
+
+  .desc {
+    width: 100%;
+  }
 }

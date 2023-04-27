@@ -4,11 +4,31 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import ProductsCarousel from '../components/productsCarousel/ProductsCarousel';
 import heartIcon from '../assets/heartIcon.svg';
-import fbLogo from '../assets/facebookLogo.svg';
 import arrow from '../assets/arrowDown.svg';
 import ProductDetails from '../components/productDetails/ProductDetails';
+import { useState } from 'react';
+
+const MAX_QUANTITY = 5;
 
 const ProductPage = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const decrementQuantity = function () {
+    if (quantity === 1) return;
+
+    setQuantity(quantity - 1);
+  };
+
+  const incrementQuantity = function () {
+    if (quantity === MAX_QUANTITY) return;
+
+    setQuantity(quantity + 1);
+  };
+
+  const quantityChangeHandler = function (e) {
+    setQuantity(e.target.value);
+  };
+
   return (
     <>
       <Header />
@@ -22,7 +42,7 @@ const ProductPage = () => {
             />
             <div className={classes.imagesSlider}>
               <button>
-                <img id={classes.prevBtn} src={arrow} alt="Previous picture" />
+                <img id={classes.prevBtn} src={arrow} alt="Previous img" />
               </button>
               <ul className={classes.moreImages}>
                 <li>
@@ -43,63 +63,75 @@ const ProductPage = () => {
                 </li>
               </ul>
               <button>
-                <img id={classes.nextBtn} src={arrow} alt="Previous picture" />
+                <img id={classes.nextBtn} src={arrow} alt="Next img" />
               </button>
             </div>
           </div>
 
           <div className={classes.content}>
-            <p className={classes.productCode}>
-              <b>Product code: </b>
-              <span>g7s0-567</span>
-            </p>
-            <h2 className={classes.productName}>RTX 3090</h2>
-            <p className={classes.productCondition}>
-              <b>Condition: </b> <span>Like new</span>
-            </p>
+            <p className={classes.productCode}>Code: t6v0-258</p>
+            <h2 className={classes.productName}>RTX 4090</h2>
             <p className={classes.productPrice}>
               4000₾ <span>6800₾</span>
+            </p>
+            <p className={classes.productCondition}>
+              <b>Like new</b>
+            </p>
+            <p className={classes.productDesc}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
 
             <div className={classes.productQuantity}>
               <div className={classes.inputWrapper}>
-                <button className={classes.decrBtn}>-</button>
+                <button className={classes.decrBtn} onClick={decrementQuantity}>
+                  -
+                </button>
                 <label htmlFor="quantity"></label>
                 <input
                   id="quantity"
                   name="quantity"
                   type="number"
-                  defaultValue={1}
+                  min="1"
+                  max={MAX_QUANTITY}
+                  value={quantity}
+                  onChange={quantityChangeHandler}
                 />
-                <button className={classes.incrBtn}>+</button>
+                <button className={classes.incrBtn} onClick={incrementQuantity}>
+                  +
+                </button>
               </div>
 
               <button className={classes.addToCartBtn}>ADD TO CART</button>
+
+              <button className={classes.addToWishlistBtn}>
+                <img src={heartIcon} alt="Add to wishlist icon" />
+              </button>
             </div>
 
-            <button className={classes.addToWishlistBtn}>
-              <img src={heartIcon} alt="Add to wishlist icon" />
-              Add to wishlist
-            </button>
-
-            <div className={classes.share}>
-              <p>Share</p>
-              <img src={fbLogo} alt="Share on Facebook" />
+            <div className={classes.info}>
+              <div>
+                <p>სისტემა იწყობა შეკვეთიდან 24 საათში</p>
+              </div>
+              <div>
+                <p>კომპლექტაცია შედგება ახალი და Like New დეტალებისაგან</p>
+              </div>
+              <div>
+                <p>
+                  ყველა ნაწილს გავლილი აქვს საჭირო ტესტირება და იყიდება 1 წლიანი
+                  გარანტიით
+                </p>
+              </div>
+              <div>
+                <p>
+                  მახასიათებლებში შეგიძლიათ შეიტნოთ ცვლილებები სურვილისამებრ
+                </p>
+              </div>
             </div>
-
-            <ul className={classes.moreInfo}>
-              <li>მოქმედებს 1 წლიანი გარანტია საუკეთესო პირობებით</li>
-              <li>შეგიძლიათ ისარგებლოთ განვადებით</li>
-              <li>სისტემა იწყობა შეკვეთიდან 24 საათში</li>
-              <li>კომპლექტაცია შედგება ახალი და Like New დეტალებისაგან</li>
-              <li>
-                ყველა ნაწილს გავლილი აქვს საჭირო ტესტირება და იყიდება 1 წლიანი
-                გარანტიით
-              </li>
-              <li>
-                მახასიათებლებში შეგიძლიათ შეიტნოთ ცვლილებები სურვილისამებრ
-              </li>
-            </ul>
           </div>
         </div>
 
