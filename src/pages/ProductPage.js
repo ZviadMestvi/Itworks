@@ -3,6 +3,7 @@ import productImg from '../assets/productImg.webp';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import ProductsCarousel from '../components/productsCarousel/ProductsCarousel';
+import fbIcon from '../assets/facebookLogo.svg';
 import heartIcon from '../assets/heartIcon.svg';
 import arrow from '../assets/arrowDown.svg';
 import ProductDetails from '../components/productDetails/ProductDetails';
@@ -71,9 +72,9 @@ const ProductPage = () => {
           <div className={classes.content}>
             <p className={classes.productCode}>Code: t6v0-258</p>
             <h2 className={classes.productName}>RTX 4090</h2>
-            <p className={classes.productPrice}>
+            <h3 className={classes.productPrice}>
               4000₾ <span>6800₾</span>
-            </p>
+            </h3>
             <p className={classes.productCondition}>
               <b>Like new</b>
             </p>
@@ -96,6 +97,7 @@ const ProductPage = () => {
                   id="quantity"
                   name="quantity"
                   type="number"
+                  aria-label="quantity"
                   min="1"
                   max={MAX_QUANTITY}
                   value={quantity}
@@ -112,6 +114,13 @@ const ProductPage = () => {
                 <img src={heartIcon} alt="Add to wishlist icon" />
               </button>
             </div>
+
+            <p className={classes.shareProduct}>
+              Share:
+              <a href="#">
+                <img src={fbIcon} alt="Share on Facebook" />
+              </a>
+            </p>
 
             <div className={classes.info}>
               <div>

@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   border-top: 1px solid #ebebeb;
-  padding: 30px 0;
+  padding: 30px 0 17px 0;
   margin-top: 42px;
 }
 
@@ -199,6 +199,28 @@
     contrast(102%);
   width: 20px;
   height: 20px;
+}
+
+.shareProduct {
+  display: flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-family: var(--mulish);
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.shareProduct img {
+  position: relative;
+  top: 2px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.shareProduct img:hover {
+  filter: invert(34%) sepia(30%) saturate(1328%) hue-rotate(126deg)
+    brightness(53%) contrast(92%);
 }
 
 .info {
