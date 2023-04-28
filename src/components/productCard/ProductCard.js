@@ -8,23 +8,27 @@ const ProductCard = props => {
   const classes = props.page === 'main' ? mainPage : productsPage;
   const navigate = useNavigate();
 
-  const navigateHandler = function (value) {
+  const navigateHandler = function (value, e) {
     navigate(value);
   };
 
   return (
-    <div
-      className={classes.wrapper}
-      onClick={navigateHandler.bind(null, '/product/test')}
-    >
+    <div className={classes.wrapper}>
       <div className={classes.imgWrapper}>
-        <img className={classes.productImg} src={productImg} alt="Ryzen PC " />
+        <img
+          onClick={navigateHandler.bind(null, '/product/test')}
+          className={classes.productImg}
+          src={productImg}
+          alt="Ryzen PC "
+        />
         <button className={classes.addToWishlistBtn}>
           <img src={wishlistIcon} alt="Add to favourites" />
         </button>
       </div>
       <div className={classes.productContent}>
-        <h5>R5 3600X - RAM 16GB - HDD 500GB - SSD 240GB - GTX 1070 8GB</h5>
+        <h5 onClick={navigateHandler.bind(null, '/product/test')}>
+          R5 3600X - RAM 16GB - HDD 500GB - SSD 240GB - GTX 1070 8GB
+        </h5>
         <p>
           <span className={classes.oldPrice}>₾ 3390</span>
           <span className={classes.gold}>₾ </span>
