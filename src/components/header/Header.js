@@ -6,10 +6,18 @@ import cart from '../../assets/cartIcon.svg';
 import Search from '../search/Search';
 import Navigation from '../navigation/Navigation';
 import QuickInfo from '../quickInfo/QuickInfo';
+import CartOverlay from '../cartOverlay/CartOverlay';
+import { useState } from 'react';
 
 const Header = () => {
+  const [cartOverlayVis, setCartOverlayVis] = useState(false);
+
   const goToHome = function () {
     window.location = '/';
+  };
+
+  const toggleCartOverlayVis = function () {
+    setCartOverlayVis(!cartOverlayVis);
   };
 
   return (
@@ -24,20 +32,22 @@ const Header = () => {
         <Search />
 
         <div className={classes.headerTools}>
-          <button>
+          <button className={classes.toolBtn}>
             <img src={profile} alt="Profile icon" />
-            <p>Profile</p>
+            <span>Profile</span>
           </button>
 
-          <button>
+          <button className={classes.toolBtn}>
             <img src={heart} alt="Heart icon" />
-            <p>Wishlist</p>
+            <span>Wishlist</span>
           </button>
 
-          <button>
+          <button onClick={toggleCartOverlayVis} className={classes.toolBtn}>
             <img id={classes.cartIcon} src={cart} alt="Cart icon" />
-            <p>Cart</p>
+            <span>Cart</span>
           </button>
+
+          {cartOverlayVis && <CartOverlay />}
         </div>
       </div>
 

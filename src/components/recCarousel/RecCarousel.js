@@ -7,7 +7,6 @@ const RecCarousel = () => {
     <div className={classes.wrapper}>
       <div className={classes.carouselTitle}>
         <h4>Recommended</h4>
-        <div className={classes.line}></div>
 
         <div className={classes.container}>
           <button className={classes.prevBtn}>

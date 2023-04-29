@@ -1,0 +1,84 @@
+.wrapper {
+  position: absolute;
+  top: 89px;
+  right: 0;
+  padding: 15px 0;
+  box-shadow: 0px 0px 4.65px 0.35px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 3px;
+  width: 350px;
+  z-index: 10000;
+}
+
+.totalWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px 0 16px;
+  margin-bottom: 12px;
+}
+
+.totalWrapper h5 {
+  font-size: 1rem;
+  font-family: var(--mulish);
+  font-weight: 600;
+}
+
+.totalWrapper p {
+  font-size: 0.9375rem;
+  font-family: var(--exo2);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.btnsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.btnsWrapper button {
+  font-size: 0.875rem;
+  font-family: var(--poppins);
+  background-color: var(--white);
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+  padding: 7px 20px;
+  margin: 0 5px;
+  transition: all 200ms;
+  color: black;
+  cursor: pointer;
+}
+
+.btnsWrapper .viewCartBtn {
+  background-color: var(--white);
+  color: black;
+}
+
+.btnsWrapper .checkoutBtn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btnsWrapper button:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    top: 56px;
+    right: -1px;
+  }
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    max-width: calc(100vw - 30px);
+    right: 0;
+  }
+}

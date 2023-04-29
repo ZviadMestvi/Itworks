@@ -19,7 +19,7 @@ const ProductCard = props => {
           onClick={navigateHandler.bind(null, '/product/test')}
           className={classes.productImg}
           src={productImg}
-          alt="Ryzen PC "
+          alt="Ryzen PC"
         />
         <button className={classes.addToWishlistBtn}>
           <img src={wishlistIcon} alt="Add to favourites" />

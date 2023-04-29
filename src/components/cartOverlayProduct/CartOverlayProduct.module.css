@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  padding: 0 18px 0 4px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.wrapper img {
+  margin-right: 8px;
+  width: 75px;
+  height: 75px;
+}
+
+.productInfo {
+  margin-top: 8px;
+}
+
+.productInfo .productName {
+  font-size: 0.875rem;
+  font-family: var(--inter);
+  font-weight: 700;
+}
+
+.productInfo .productPrice {
+  font-size: 0.875rem;
+  font-family: var(--inter);
+  margin-top: 4px;
+}
+
+.productInfo .productPrice .price {
+  font-size: 14.9px;
+  font-family: var(--exo2);
+}
+
+.removeBtn {
+  font-size: 1rem;
+  font-family: var(--exo2);
+  background-color: transparent;
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  color: var(--primarys-color);
+}

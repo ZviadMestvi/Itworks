@@ -33,7 +33,11 @@ const Navigation = () => {
   };
 
   const renderCategories = categories.map((category, i) => {
-    return <li key={category}>{category}</li>;
+    return (
+      <li key={category} onClick={navigateHandler.bind(null, '/products')}>
+        {category}
+      </li>
+    );
   });
 
   return (

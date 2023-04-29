@@ -8,8 +8,6 @@ const SalesCarousel = () => {
       <div className={classes.carouselTitle}>
         <h4>Hot deals</h4>
 
-        <div className={classes.line}></div>
-
         <div className={classes.container}>
           <button className={classes.prevBtn}>
             <img src={arrow} alt="prev product" />

@@ -147,6 +147,7 @@
 
 @media (max-width: 362px) {
   .wrapper {
+    border-right: none;
     min-width: 98%;
   }
 }

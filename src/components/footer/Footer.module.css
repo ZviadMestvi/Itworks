@@ -140,11 +140,11 @@
   }
 
   .belowFooterContent p {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .belowFooterContent div img {
-    margin-left: 14px;
-    width: 30%;
+    margin-left: 10px;
+    width: 28%;
   }
 }

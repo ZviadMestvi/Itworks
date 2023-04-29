@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   margin: 0 auto;
   padding: 12px 0;
   max-width: 1320px;
@@ -18,7 +19,7 @@
   align-items: center;
 }
 
-.headerTools button {
+.headerTools .toolBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,16 +29,16 @@
   cursor: pointer;
 }
 
-.headerTools button:hover p {
+.headerTools .toolBtn:hover span {
   color: var(--secondary-color);
 }
 
-.headerTools img {
+.headerTools .toolBtn img {
   width: 26px;
   height: 26px;
 }
 
-.headerTools p {
+.headerTools .toolBtn span {
   font-size: 0.875rem;
   font-family: var(--quicksand);
   font-weight: 600;
@@ -65,11 +66,11 @@
     width: 172px;
   }
 
-  .headerTools button {
+  .headerTools .toolBtn {
     margin-left: 24px;
   }
 
-  .headerTools img {
+  .headerTools .toolBtn img {
     width: 24px;
     height: 24px;
   }
@@ -110,16 +111,16 @@
     max-width: calc(100vw - 30px);
   }
 
-  .headerTools button {
+  .headerTools .toolBtn {
     margin-left: 20px;
   }
 
-  .headerTools img {
+  .headerTools .toolBtn img {
     width: 22px;
     height: 22px;
   }
 
-  .headerTools p {
+  .headerTools .toolBtn span {
     font-size: 0.8125rem;
   }
 }
@@ -129,11 +130,11 @@
     right: 165px;
   }
 
-  .headerTools button {
+  .headerTools .toolBtn {
     margin-left: 15px;
   }
 
-  .headerTools img {
+  .headerTools .toolBtn img {
     width: 20px;
     height: 20px;
   }
